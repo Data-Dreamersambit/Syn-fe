@@ -7,8 +7,8 @@ import Signup from "../pages/Signup";
 import BlogList from "../pages/BlogList";
 import Faq from "../pages/Faq";
 import Apply from "../pages/Apply";
-import Try from "../pages/try";
-import Courses from "../pages/Courses";
+
+
 const AppRoutes = () => {
   return (
     <Routes>
@@ -20,8 +20,6 @@ const AppRoutes = () => {
       <Route path="/bloglist" element={<BlogList />} />
       <Route path="/faq" element={<Faq />} />
       <Route path="/apply" element={<Apply />} />
-      <Route path="/try" element={<Try />} />
-      <Route path="/courses" element={<Courses />} />
        
     </Routes>
   );

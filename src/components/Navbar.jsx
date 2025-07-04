@@ -137,7 +137,7 @@ const Navbar = () => {
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200">
             <div className="flex items-center justify-center space-x-4 px-4">
-              <Link
+              {/* <Link
                 to="/login"
                 className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-blue-600"
                 onClick={toggleMenu}
@@ -150,7 +150,7 @@ const Navbar = () => {
                 onClick={toggleMenu}
               >
                 Sign up
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
