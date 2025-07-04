@@ -1,46 +1,68 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from 'axios';
+ import { toast } from 'react-toastify';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
-    fullName: "",
+    username: "", // was fullName before
     email: "",
     password: "",
     confirmPassword: "",
-    agreeTerms: false,
   });
 
   const [passwordMatchError, setPasswordMatchError] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === "checkbox" ? checked : value,
-    });
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
 
-    // Check password match when either password field changes
     if (name === "password" || name === "confirmPassword") {
-      if (name === "password") {
-        setPasswordMatchError(
-          value !== formData.confirmPassword && formData.confirmPassword !== ""
-        );
-      } else {
-        setPasswordMatchError(value !== formData.password);
-      }
+      setPasswordMatchError(
+        name === "password"
+          ? value !== formData.confirmPassword && formData.confirmPassword !== ""
+          : value !== formData.password
+      );
     }
   };
 
-  const handleSubmit = (e) => {
+       // Optionally: redirect or clear form
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (formData.password !== formData.confirmPassword) {
       setPasswordMatchError(true);
+      toast.error("Passwords do not match!");
       return;
     }
-    
-    console.log("Registration form submitted:", formData);
-    // Add registration logic here
+
+    try {
+      const { username, email, password } = formData;
+
+      const res = await axios.post(
+        "http://localhost:8000/api/v1/users/register",
+        { username, email, password }
+      );
+
+      toast.success("Signup successful!");
+      console.log(res.data);
+
+      // Optionally: redirect or clear form
+      setFormData({
+        username: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+      });
+    } catch (err) {
+      const errorMessage = err?.response?.data?.message || "Signup failed!";
+      toast.error(errorMessage);
+      console.error("Signup failed:", errorMessage);
+    }
   };
 
   return (
@@ -64,9 +86,8 @@ const Signup = () => {
                 </label>
                 <input
                   type="text"
-                  id="fullName"
-                  name="fullName"
-                  value={formData.fullName}
+                  name="username"
+                  value={formData.username}
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
@@ -83,7 +104,6 @@ const Signup = () => {
                 </label>
                 <input
                   type="email"
-                  id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
@@ -108,7 +128,6 @@ const Signup = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
-                  placeholder="••••••••"
                 />
               </div>
 
@@ -131,7 +150,6 @@ const Signup = () => {
                       ? "border-red-500 focus:ring-2 focus:ring-red-500 focus:border-red-500"
                       : "border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   }`}
-                  placeholder="••••••••"
                 />
                 {passwordMatchError && (
                   <p className="text-red-500 text-sm mt-1">
@@ -139,38 +157,9 @@ const Signup = () => {
                   </p>
                 )}
               </div>
-
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="agreeTerms"
-                  name="agreeTerms"
-                  checked={formData.agreeTerms}
-                  onChange={handleChange}
-                  required
-                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                />
-                <label
-                  htmlFor="agreeTerms"
-                  className="ml-2 block text-sm text-gray-700"
-                >
-                  I agree to the{" "}
-                  <Link to="/terms" className="text-blue-600 hover:text-blue-800">
-                    Terms of Service
-                  </Link>{" "}
-                  and{" "}
-                  <Link
-                    to="/privacy"
-                    className="text-blue-600 hover:text-blue-800"
-                  >
-                    Privacy Policy
-                  </Link>
-                </label>
-              </div>
-
-              <button
+              <button  
                 type="submit"
-                className="w-full px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                className="w-full px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors cursor-pointer"
               >
                 Create Account
               </button>

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-    rememberMe: false,
   });
 
   const handleChange = (e) => {
@@ -16,11 +17,30 @@ const Login = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Login form submitted:", formData);
-    // Add authentication logic here
+
+    try {
+      const { email, password } = formData;
+
+      const res = await axios.post(
+        "http://localhost:8000/api/v1/users/login",
+        { email, password },
+        {
+          withCredentials: true,
+        }
+      );
+
+      toast.success("Login successful!");
+      console.log(res.data);
+
+    } catch (err) {
+      const errorMessage = err?.response?.data?.message || "Login failed!";
+      toast.error(errorMessage);
+      console.error("Login failed:", errorMessage);
+    }
   };
+
 
   return (
       <div className="flex justify-center items-center py-12">
@@ -80,26 +100,11 @@ const Login = () => {
                 />
               </div>
 
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="rememberMe"
-                  name="rememberMe"
-                  checked={formData.rememberMe}
-                  onChange={handleChange}
-                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                />
-                <label
-                  htmlFor="rememberMe"
-                  className="ml-2 block text-sm text-gray-700"
-                >
-                  Remember me
-                </label>
-              </div>
+         
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                className="w-full px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors cursor-pointer"
               >
                 Sign In
               </button>
@@ -108,7 +113,7 @@ const Login = () => {
             <div className="mt-6 text-center">
               <span className="text-gray-600">Don't have an account?</span>{" "}
               <Link
-                to="/register"
+                to="/signup"
                 className="text-blue-600 font-medium hover:text-blue-800"
               >
                 Sign up
