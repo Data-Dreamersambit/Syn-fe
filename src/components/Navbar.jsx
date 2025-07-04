@@ -19,7 +19,8 @@ const Navbar = () => {
 
   const resourceLinks = [
     { name: "Blog", to: "/bloglist" },
-    { name: "FAQ", to: "/faq" },
+    { name: "Faq", to: "/faq" },
+    { name: "Courses", to: "/courses" },
   ];
 
   return (
@@ -74,20 +75,7 @@ const Navbar = () => {
             </div>
           </nav>
 
-          <div className="hidden md:flex items-center space-x-4">
-            <Link
-              to="/login"
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium"
-            >
-              Log in
-            </Link>
-            <Link
-              to="/signup"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 text-sm font-medium rounded-md"
-            >
-              Sign up
-            </Link>
-          </div>
+           
 
           <div className="md:hidden">
             <button
