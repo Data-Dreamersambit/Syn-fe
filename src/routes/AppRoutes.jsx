@@ -7,7 +7,6 @@ import Signup from "../pages/Signup";
 import BlogList from "../pages/BlogList";
 import Faq from "../pages/Faq";
 import Apply from "../pages/Apply";
-import Try from "../pages/try";
 import Courses from "../pages/Courses";
 const AppRoutes = () => {
   return (
