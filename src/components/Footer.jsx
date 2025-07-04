@@ -22,18 +22,19 @@ const Footer = () => {
             </p>
 
             <div className="mt-4 flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-blue-600">
+              <Link className="text-gray-400 hover:text-blue-600">
                 <Facebook size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-600">
+              </Link>
+              <Link className="text-gray-400 hover:text-blue-600">
                 <Twitter size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-600">
+              </Link>
+              <Link className="text-gray-400 hover:text-blue-600">
                 <Linkedin size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-600">
+              </Link>
+              <Link className="text-gray-400 hover:text-blue-600">
                 <Instagram size={20} />
-              </a>
+              </Link>
+             
             </div>
           </div>
 
@@ -44,7 +45,7 @@ const Footer = () => {
             <ul className="mt-4 space-y-3">
               <li>
                 <Link
-                  to="/features"
+                  to="/apply"
                   className="text-gray-600 hover:text-blue-600 text-sm"
                 >
                   Apply
@@ -52,7 +53,6 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/mentorship"
                   className="text-gray-600 hover:text-blue-600 text-sm"
                 >
                   Mentorship
@@ -60,7 +60,6 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/projects"
                   className="text-gray-600 hover:text-blue-600 text-sm"
                 >
                   Projects
@@ -68,7 +67,6 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/events"
                   className="text-gray-600 hover:text-blue-600 text-sm"
                 >
                   Events
@@ -92,7 +90,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/blog"
+                  to="/bloglist"
                   className="text-gray-600 hover:text-blue-600 text-sm"
                 >
                   Blog
@@ -100,7 +98,6 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/careers"
                   className="text-gray-600 hover:text-blue-600 text-sm"
                 >
                   Careers
@@ -124,7 +121,6 @@ const Footer = () => {
             <ul className="mt-4 space-y-3">
               <li>
                 <Link
-                  to="/privacy"
                   className="text-gray-600 hover:text-blue-600 text-sm"
                 >
                   Privacy Policy
@@ -132,7 +128,6 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/terms"
                   className="text-gray-600 hover:text-blue-600 text-sm"
                 >
                   Terms of Service
@@ -140,7 +135,6 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/cookies"
                   className="text-gray-600 hover:text-blue-600 text-sm"
                 >
                   Cookie Policy
@@ -148,7 +142,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/help"
+                  to="/contact"
                   className="text-gray-600 hover:text-blue-600 text-sm"
                 >
                   Help Center
@@ -161,17 +155,15 @@ const Footer = () => {
         <div className="border-t border-gray-200 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-600">
-              © {currentYear} ConnectEd. All rights reserved.
+              © {currentYear} Synauris. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0">
               <Link
-                to="/terms"
                 className="text-sm text-gray-600 hover:text-blue-600 mr-4"
               >
                 Terms
               </Link>
               <Link
-                to="/privacy"
                 className="text-sm text-gray-600 hover:text-blue-600"
               >
                 Privacy

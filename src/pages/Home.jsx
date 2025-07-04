@@ -26,10 +26,10 @@ const Home = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/services"
+                to="/courses"
                 className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
               >
-                Explore Services
+                Explore Courses
               </Link>
               <Link
                 to="/contact"
@@ -61,21 +61,21 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
-              title: "Customizable Solutions",
+              title: "Customizable Training",
               description:
-                "Tailor our services to fit your specific requirements and goals.",
+                "Tailor our training to fit your specific requirements and goals.",
               icon: "🛠️",
             },
             {
               title: "Excellent Support",
               description:
-                "Our team is available 24/7 to assist you with any questions or concerns.",
+                "Our team is always available to assist you with any questions or concerns.",
               icon: "🌟",
             },
             {
-              title: "Seamless Integration",
+              title: "Seamless Preapration",
               description:
-                "Easily integrate our platform with your existing systems and workflows.",
+                "Easily learn and be market ready with our platform to contribute to companies and workflows.",
               icon: "🔄",
             },
           ].map((feature, index) => (
@@ -93,21 +93,21 @@ const Home = () => {
 
       <section className="bg-blue-50 p-8 rounded-lg">
         <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-          What Our Clients Say
+          What Our students Say
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
             {
               quote:
-                "This platform has completely transformed how we manage our business operations. Highly recommended!",
-              author: "Jane Smith",
-              position: "CEO, TechCorp",
+                "This platform has completely transformed how  i learn things. Highly recommended!",
+              author: "student 1",
+              position: "college1, location1",
             },
             {
               quote:
                 "The customer support team is exceptional. They've helped us every step of the way.",
-              author: "John Doe",
-              position: "Director, InnovateCo",
+              author: "student 2",
+              position: "college 2, location 2",
             },
           ].map((testimonial, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md">
@@ -127,7 +127,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 text-white p-8 rounded-lg text-center">
+      {/* <section className="bg-blue-600 text-white p-8 rounded-lg text-center">
         <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
         <p className="text-xl mb-6 max-w-2xl mx-auto">
           Join thousands of satisfied customers who have transformed their
@@ -139,7 +139,7 @@ const Home = () => {
         >
           Sign Up Now
         </Link>
-      </section>
+      </section> */}
     </div>
   );
 };

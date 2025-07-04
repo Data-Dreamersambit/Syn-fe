@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import img1 from '../course-img/img1.jpeg'
+import img2 from '../course-img/img2.jpeg'
+import img3 from '../course-img/img3.jpeg'
+import img4 from '../course-img/img4.jpeg'
+import img5 from '../course-img/img5.jpeg'
+import img6 from '../course-img/img6.jpeg'
+
 
 const BlogList = () => {
   // Sample blog posts data - in a real app, this would come from an API
@@ -9,66 +16,54 @@ const BlogList = () => {
       title: "How to Maximize Your Productivity",
       excerpt:
         "Discover the best practices and tools that can help you boost your productivity and achieve more in less time.",
-      author: "Alex Johnson",
-      date: "May 5, 2025",
+      
       category: "Productivity",
-      image: "/api/placeholder/600/400",
-      readTime: "5 min read",
+      image: img1,
     },
     {
       id: 2,
       title: "The Future of Remote Work",
       excerpt:
         "As remote work becomes more mainstream, we explore the trends and technologies shaping the future of how we work.",
-      author: "Sarah Williams",
-      date: "May 2, 2025",
+     
       category: "Business",
-      image: "/api/placeholder/600/400",
-      readTime: "8 min read",
+      image:img2,
     },
     {
       id: 3,
       title: "Understanding Modern Web Development",
       excerpt:
         "A comprehensive guide to the latest technologies, frameworks, and methodologies in modern web development.",
-      author: "Michael Chen",
-      date: "April 28, 2025",
+     
       category: "Technology",
-      image: "/api/placeholder/600/400",
-      readTime: "10 min read",
+      image:img3,
     },
     {
       id: 4,
       title: "Creating Effective Customer Experiences",
       excerpt:
         "Learn how to design customer experiences that build loyalty and drive growth for your business.",
-      author: "Emily Rodriguez",
-      date: "April 25, 2025",
+     
       category: "Marketing",
-      image: "/api/placeholder/600/400",
-      readTime: "6 min read",
+      image: img4,
     },
     {
       id: 5,
       title: "Data Security Best Practices",
       excerpt:
         "Essential strategies to protect your business and customer data in an increasingly complex digital landscape.",
-      author: "David Park",
-      date: "April 20, 2025",
+     
       category: "Security",
-      image: "/api/placeholder/600/400",
-      readTime: "7 min read",
+      image: img5,
     },
     {
       id: 6,
       title: "Scaling Your Business Successfully",
       excerpt:
         "Key insights and strategies for growing your business while maintaining quality and culture.",
-      author: "Lisa Thompson",
-      date: "April 15, 2025",
+    
       category: "Business",
-      image: "/api/placeholder/600/400",
-      readTime: "9 min read",
+      image: img6,
     },
   ]);
 

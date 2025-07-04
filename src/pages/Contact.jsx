@@ -43,19 +43,13 @@ const Contact = () => {
               </p>
 
               <div className="space-y-4 mt-6">
-                <div className="flex items-start">
-                  <Phone className="h-5 w-5 text-blue-600 mr-3 mt-1" />
-                  <div>
-                    <p className="font-medium">Phone</p>
-                    <p className="text-gray-600">(123) 456-7890</p>
-                  </div>
-                </div>
+               
 
                 <div className="flex items-start">
                   <Mail className="h-5 w-5 text-blue-600 mr-3 mt-1" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-gray-600">contact@ourplatform.com</p>
+                    <p className="text-gray-600">synauris@gmail.com</p>
                   </div>
                 </div>
 
@@ -64,9 +58,8 @@ const Contact = () => {
                   <div>
                     <p className="font-medium">Address</p>
                     <p className="text-gray-600">
-                      123 Business Avenue, Suite 200
+                      Bangalore,India
                     </p>
-                    <p className="text-gray-600">San Francisco, CA 94107</p>
                   </div>
                 </div>
 
@@ -75,7 +68,7 @@ const Contact = () => {
                   <div>
                     <p className="font-medium">Support Hours</p>
                     <p className="text-gray-600">Monday - Friday: 9AM - 6PM</p>
-                    <p className="text-gray-600">Weekend: 10AM - 4PM</p>
+                    <p className="text-gray-600">Weekend: 10AM - 3PM</p>
                   </div>
                 </div>
               </div>
