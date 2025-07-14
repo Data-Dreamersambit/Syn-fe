@@ -1,5 +1,9 @@
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
-  ]
+  ],
+  "cleanUrls": true,
+  "redirects": [],
+  "headers": [],
+  "trailingSlash": false
 }
