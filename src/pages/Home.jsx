@@ -73,7 +73,7 @@ const Home = () => {
               icon: "🌟",
             },
             {
-              title: "Seamless Preapration",
+              title: "Seamless Preparation",
               description:
                 "Easily learn and be market ready with our platform to contribute to companies and workflows.",
               icon: "🔄",
@@ -99,16 +99,16 @@ const Home = () => {
           {[
             {
               quote:
-                "This platform has completely transformed how  i learn things. Highly recommended!",
-              author: "student 1",
-              position: "college1, location1",
+                "Feeling super grateful to be interning at Synaurius✨The work environment is so positive ☘, the mentors are incredibly friendly and supportive 💌, and every day brings a new learning experience 💡It truly feels like a place where creativity is valued and growth is constant 🫶🏻",
+              author: "Aman",
+              // position: "college1, location1",
             },
-            {
-              quote:
-                "The customer support team is exceptional. They've helped us every step of the way.",
-              author: "student 2",
-              position: "college 2, location 2",
-            },
+            // {
+            //   quote:
+            //     "The customer support team is exceptional. They've helped us every step of the way.",
+            //   author: "student 2",
+            //   position: "college 2, location 2",
+            // },
           ].map((testimonial, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md">
               <p className="text-gray-600 italic mb-4">"{testimonial.quote}"</p>

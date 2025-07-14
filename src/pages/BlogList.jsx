@@ -6,6 +6,7 @@ import img3 from '../course-img/img3.jpeg'
 import img4 from '../course-img/img4.jpeg'
 import img5 from '../course-img/img5.jpeg'
 import img6 from '../course-img/img6.jpeg'
+import img7 from '../course-img/img7.jpeg'
 
 
 const BlogList = () => {
@@ -96,7 +97,7 @@ const BlogList = () => {
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/2">
                 <img
-                  src="/api/placeholder/800/500"
+                  src={img7}
                   alt="Featured post"
                   className="w-full h-full object-cover"
                 />

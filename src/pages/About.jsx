@@ -9,6 +9,7 @@ import Subhankar from '../assets/Subhankar.jpg'
 import Suman from '../assets/Suman.jpg'
 import Niyatee from '../assets/Niyatee.jpg'
 
+
 const About = () => {
   const sections = [
     "Leadership",
@@ -53,11 +54,11 @@ const About = () => {
       }
     ],
     Marketing: [
-      { 
-        name: "Sriharsha", 
-        position: "CMO", 
-        image: memberImages[3]
-      },
+      // { 
+      //   name: "Sriharsha", 
+      //   position: "CMO", 
+      //   image: memberImages[3]
+      // },
        
     ],
     Operations: [
@@ -80,10 +81,8 @@ const About = () => {
               About Our Company
             </h1>
             <p className="text-lg text-gray-600 mb-6">
-              Founded in 2015, our company has been at the forefront of
-              innovation and excellence. We're dedicated to providing
-              cutting-edge solutions that empower businesses and individuals
-              alike.
+             Our company is trying to build a world where every student gains real-world experience and practical skills through meaningful opportunities—created by students, for students. We envision a future where learning is driven by doing, and every fresher gets the chance they deserve.
+
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -96,7 +95,7 @@ const About = () => {
                 to="/services"
                 className="px-6 py-3 border border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors"
               >
-                Our Services
+                Our Courses
               </Link>
             </div>
           </div>
@@ -121,16 +120,10 @@ const About = () => {
           <div className="max-w-3xl mx-auto text-center">
             <Globe className="mx-auto text-blue-600 mb-6 h-16 w-16" />
             <p className="text-xl text-gray-600 mb-4">
-              Our mission is to revolutionize how businesses operate by
-              providing innovative, accessible, and reliable technology
-              solutions that drive growth and success in an ever-changing
-              digital landscape.
+              
+At Synauris, our mission is to provide hands-on experience to students by connecting them with startups, helping them build relevant skills, recognize their gaps, and grow into confident professionals. We are a student-led initiative committed to guiding freshers in the right direction through real, impactful opportunities.
             </p>
-            <p className="text-lg text-gray-600">
-              We strive to make complex technology simple, empowering our
-              clients to achieve their goals while maintaining the highest
-              standards of quality, security, and customer satisfaction.
-            </p>
+           
           </div>
         </div>
       </section>
