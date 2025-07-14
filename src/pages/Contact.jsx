@@ -43,8 +43,6 @@ const Contact = () => {
               </p>
 
               <div className="space-y-4 mt-6">
-               
-
                 <div className="flex items-start">
                   <Mail className="h-5 w-5 text-blue-600 mr-3 mt-1" />
                   <div>
@@ -57,9 +55,7 @@ const Contact = () => {
                   <MapPin className="h-5 w-5 text-blue-600 mr-3 mt-1" />
                   <div>
                     <p className="font-medium">Address</p>
-                    <p className="text-gray-600">
-                      Bangalore,India
-                    </p>
+                    <p className="text-gray-600">Bangalore,India</p>
                   </div>
                 </div>
 
@@ -193,7 +189,14 @@ const Contact = () => {
               Our Location
             </h2>
             <div className="w-full h-64 md:h-80 bg-gray-200 rounded-lg overflow-hidden">
-              {/* Placeholder for map */}
+              <iframe
+                src="https://maps.google.com/maps?q=q=Bangalore,Karnataka&z=15&output=embed"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                style={{ border: 0 }}
+              ></iframe>
+
               <div className="w-full h-full flex items-center justify-center bg-gray-100 text-gray-500">
                 Interactive Map Would Be Displayed Here
               </div>
